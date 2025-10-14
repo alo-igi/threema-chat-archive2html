@@ -1,5 +1,9 @@
 # Threema Chat HTML Converter
 
+Convert Threema’s plain-text chat exports into interactive HTML — with precompiled versions for Windows, macOS, and Linux.
+
+---
+
 ### 🗂️ Read your Threema chat archives easily
 
 When you archive a single Threema chat, it's saved as a **password-protected ZIP file**.
