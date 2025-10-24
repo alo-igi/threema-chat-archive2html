@@ -69,14 +69,12 @@ threema_chat2html /path/to/chat my_chat.txt
 If no parameters are given, the program searches for Threema files in the **folder where it sits**.
 
 ---
-
 ## ⚙️ Configuration
 
-The program uses **built-in default settings**, but you can customize them by providing your own **JSON configuration file**.
+The program uses **built-in default settings**, but you can customize them by providing your own **JSON configuration file**.  
+A sample configuration file is available in this repository (`threema_chat2html.config`).
 
-You can download a sample config file from this repository (`threema_chat2html.config`).
-
-### Where the program looks for a configuration file
+### 📁 Where the program looks for the configuration file
 In the following order:
 
 1. The folder path provided on the command line  
@@ -84,6 +82,28 @@ In the following order:
 3. The folder where the program itself is located  
 
 If no configuration file is found, the program uses its internal defaults.
+
+---
+
+### 🧩 Configuration file format
+
+The configuration file is a standard **JSON** file.  
+It supports the following predefined keys:
+
+| Key | Description |
+|-----|--------------|
+| `htmlPrimaryLanguage` | The main language of the generated HTML document (e.g. `"en"`, `"de"`) |
+| `htmlTitle` | The title displayed in the HTML page (shown in the browser tab) |
+| `htmlBaseStyles` | CSS styles applied globally to the HTML document |
+| `htmlSingleMessageStyle` | CSS styles for formatting individual chat messages |
+| `namedColors` | A collection of custom color definitions that can be referenced in styles |
+
+---
+
+### 🧱 Customization rules
+- The configuration file may only contain the **predefined keys** listed above.  
+- If a key is **missing** in your configuration file, its value will be taken from the **hard-coded default settings** inside the program.  
+- This means you only need to define the keys you wish to override — all other values are automatically filled in from the defaults.
 
 ---
 
